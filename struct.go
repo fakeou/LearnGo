@@ -9,7 +9,11 @@ type Person struct {
 func main () {
 	person := Person{"fake", "male", "140"}
 	if person.name == "fake" {
-		fmt.Println(person.sex)
+
+		fmt.Println(person.sex, person.getName())
 	}
 }
 
+func (l *Person) getName() string {
+	return l.name
+}
